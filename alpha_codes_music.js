@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const PREFIX = "-"
+const PREFIX = "1"
 const Util = require('discord.js');
 
 const getYoutubeID = require('get-youtube-id');
@@ -316,14 +316,14 @@ client.on('message', async msg => { // eslint disable line
             fields: [{
                 name: "Bot's commands:",
                 value: `**${PREFIX}help** - This message!\n\
-**${PREFIX}play** - Play a song from YouTube.\n\
-**${PREFIX}skip** - Skip a song.\n\
-**${PREFIX}stop** - Stops the music.\n\
-**${PREFIX}volume** - Change the volume of the bot.\n\
-**${PREFIX}np** - The song that now playing.\n\
-**${PREFIX}queue** - See the queue of songs.\n\
-**${PREFIX}pause** - Pause the music.\n\
-**${PREFIX}resume** - Resume the music.`
+**1{PREFIX}play** - Play a song from YouTube.\n\
+**1{PREFIX}skip** - Skip a song.\n\
+**1{PREFIX}stop** - Stops the music.\n\
+**1{PREFIX}volume** - Change the volume of the bot.\n\
+**1{PREFIX}np** - The song that now playing.\n\
+**1{PREFIX}queue** - See the queue of songs.\n\
+**1{PREFIX}pause** - Pause the music.\n\
+**1{PREFIX}resume** - Resume the music.`
               }
             ],
             timestamp: new Date(),
@@ -432,7 +432,7 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
                 color: 15158332,
                 fields: [{
                     name: "✅ Added song",
-                    value: `**${song.title}** has been added to the queue!`
+                    value: `**1{song.title}** has been added to the queue!`
                   }
                 ]
               }
@@ -463,7 +463,7 @@ function play(guild, song) {
         color: 15158332,
         fields: [{
             name: "✅ Start playing",
-            value: `Start playing: **${song.title}**`
+            value: `Start playing: **1{song.title}**`
           }
         ]
       }
@@ -492,4 +492,4 @@ if (message.content.startsWith(PREFIX + 'setavatar')) {
    message.channel.sendMessage(`Avatar Changed Successfully To **${argresult}**`);
 }
 });
-client.login("token bot");
+client.login("NTY3MzE1MjU4MTEzNTIzNzIy.XLRvhg.BtY1Hs0dMEsVW2TAqWSxa75yKM0");
